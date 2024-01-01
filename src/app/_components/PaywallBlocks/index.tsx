@@ -15,8 +15,9 @@ import { VerticalPadding } from '../VerticalPadding'
 export const PaywallBlocks: React.FC<{
   productSlug: string
   disableTopPadding?: boolean
+  disableBottomPadding?: boolean
 }> = props => {
-  const { productSlug, disableTopPadding } = props
+  const { productSlug, disableTopPadding, disableBottomPadding } = props
   const { user } = useAuth()
 
   const [isLoading, setIsLoading] = React.useState(false)
@@ -116,5 +117,5 @@ export const PaywallBlocks: React.FC<{
     )
   }
 
-  return <Blocks blocks={blocks} disableTopPadding={disableTopPadding} />
+  return <Blocks blocks={blocks} disableTopPadding={disableTopPadding} disableBottomPadding={disableBottomPadding} />
 }
