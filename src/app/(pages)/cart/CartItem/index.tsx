@@ -8,6 +8,9 @@ import { Media } from '../../../_components/Media';
 import { Price } from '../../../_components/Price';
 import Image from 'next/image';
 import { RemoveFromCartButton } from '../../../_components/RemoveFromCartButton';
+import plus from '../../../../../public/assets/icons/plus.svg'
+import minus from '../../../../../public/assets/icons/minus.svg'
+
 
 const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
 	const [quantity, setQuantity] = useState(qty);
@@ -47,7 +50,7 @@ const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
 				<div className={classes.quantity}>
 					<div className={classes.quantityBtn} onClick={decrementQty}>
 						<Image
-							src="assets/icons/minus.svg"
+							src={minus}
 							alt="minus"
 							width={24}
 							height={24}
@@ -64,7 +67,7 @@ const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
 
 					<div className={classes.quantityBtn} onClick={incrementQty}>
 						<Image
-							src="assets/icons/plus.svg"
+							src={plus}
 							alt="plus"
 							width={24}
 							height={24}
