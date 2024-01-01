@@ -25,7 +25,7 @@ export const OrderConfirmationPage: React.FC<{}> = () => {
       {error ? (
         <Fragment>
           <Message error={error} />
-          <p>
+          <p className={classes.margin}>
             {`Your payment was successful but there was an error processing your order. Please contact us to resolve this issue.`}
           </p>
           <div className={classes.actions}>
@@ -40,7 +40,7 @@ export const OrderConfirmationPage: React.FC<{}> = () => {
       ) : (
         <Fragment>
           <h1>Thank you for your order!</h1>
-          <p>
+          <p className={classes.margin}>
             {`Your order has been confirmed. You will receive an email confirmation shortly. Your order ID is ${orderID}.`}
           </p>
           <div className={classes.actions}>
